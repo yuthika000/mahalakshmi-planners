@@ -1,8 +1,8 @@
-import { business, services } from '../content.js';
+import { business } from '../content.js';
 import { PhoneIcon, WhatsAppIcon } from './Icons.jsx';
 import Logo from './Logo.jsx';
 
-export default function Footer({ copy, lang }) {
+export default function Footer({ copy }) {
   return (
     <>
       <footer className="footer">
@@ -21,26 +21,6 @@ export default function Footer({ copy, lang }) {
               <strong>{business.engineer}, {business.qualification}</strong><br />
               Reg. No. {business.regNo}, {business.authority}
             </p>
-          </div>
-
-          <div>
-            <h3>{copy.footerServices}</h3>
-            <ul className="footer-links">
-              {services.map((s) => (
-                <li key={s.id}><a href="#services">{s[lang].title}</a></li>
-              ))}
-            </ul>
-          </div>
-
-          <div>
-            <h3>{copy.footerContact}</h3>
-            <p><a className="footer-phone" href={`tel:${business.phoneRaw}`}>{business.phoneDisplay}</a></p>
-            <address>
-              {business.addressLines.map((l) => (<span key={l}>{l}<br /></span>))}
-            </address>
-            <a className="footer-wa" href={`https://wa.me/${business.whatsapp}`} target="_blank" rel="noreferrer">
-              <WhatsAppIcon /> WhatsApp
-            </a>
           </div>
         </div>
         <div className="wrap footer-bottom">

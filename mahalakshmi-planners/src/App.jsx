@@ -80,7 +80,7 @@ export default function App() {
 
         <Contact copy={copy} lang={lang} />
       </main>
-      <Footer copy={copy} lang={lang} />
+      <Footer copy={copy} />
       <FloatingWhatsApp label={copy.fabLabel} />
     </>
   );
