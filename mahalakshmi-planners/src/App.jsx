@@ -9,7 +9,7 @@ import Process from './components/Process.jsx';
 import Band from './components/Band.jsx';
 import Documents from './components/Documents.jsx';
 import About from './components/About.jsx';
-import Reviews from './components/Reviews.jsx';
+
 import Contact from './components/Contact.jsx';
 import Footer from './components/Footer.jsx';
 import FloatingWhatsApp from './components/FloatingWhatsApp.jsx';
@@ -27,7 +27,7 @@ function initialLang() {
 const REVEAL = [
   '.section-head', '.intro-copy', '.intro-visual', '.category', '.elev', '.process .display',
   '.step', '.band-grid > div', '.compare', '.docs-grid > div', '.checklist li', '.plate',
-  '.about-grid > div:last-child', '.faq-grid > div:first-child', '.faq-item', '.review', '.contact-panel', '.form',
+  '.about-grid > div:last-child', '.faq-grid > div:first-child', '.faq-item', '.contact-panel', '.form',
 ].join(',');
 
 function useReveal(dep) {
@@ -77,7 +77,7 @@ export default function App() {
         <Band copy={copy} />
         <Documents copy={copy} lang={lang} />
         <About copy={copy} />
-        <Reviews copy={copy} lang={lang} />
+
         <Contact copy={copy} lang={lang} />
       </main>
       <Footer copy={copy} lang={lang} />
