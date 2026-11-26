@@ -1,0 +1,6 @@
+{
+  "framework": null,
+  "installCommand": "cd mahalakshmi-planners && npm install",
+  "buildCommand": "cd mahalakshmi-planners && npm run build",
+  "outputDirectory": "mahalakshmi-planners/dist"
+}
