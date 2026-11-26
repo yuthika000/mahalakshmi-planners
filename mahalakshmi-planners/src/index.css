@@ -1237,6 +1237,7 @@ html[lang='ta'] .category-head h3 {
   margin: 0;
   max-width: 46ch;
   line-height: 1.6;
+  white-space: pre-line;
 }
 
 .footer-plate {
