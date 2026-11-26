@@ -271,6 +271,7 @@ export const t = {
     footerAbout: 'Building plan approval, DTCP approval, drawings and estimates for homes and plots across Cuddalore district.',
     footerReg: 'Registered engineer',
     rights: 'All rights reserved.',
+    backToTop: 'Back to top',
   },
   ta: {
     langLabel: 'English',
@@ -337,5 +338,6 @@ export const t = {
     footerAbout: 'கடலூர் மாவட்டம் முழுவதும் வீடுகள் மற்றும் மனைகளுக்கான கட்டட வரைபட அனுமதி, DTCP அனுமதி, வரைபடங்கள் மற்றும் மதிப்பீடுகள்.',
     footerReg: 'பதிவு பெற்ற பொறியாளர்',
     rights: 'அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.',
+    backToTop: 'மேலே செல்ல',
   },
 };

@@ -3,28 +3,46 @@ import { PhoneIcon, WhatsAppIcon } from './Icons.jsx';
 import Logo from './Logo.jsx';
 
 export default function Footer({ copy }) {
+  const links = [
+    ['#services', copy.nav.services],
+    ['#process', copy.nav.process],
+    ['#about', copy.nav.about],
+    ['#contact', copy.nav.contact],
+  ];
+
   return (
     <>
       <footer className="footer">
-        <div className="wrap footer-grid">
-          <div className="footer-brand">
-            <div className="brand">
-              <Logo />
+        <div className="wrap">
+          <div className="footer-top">
+            <a href="#top" className="brand" aria-label={business.name}>
+              <Logo size={48} />
               <span className="brand-text">
                 <span className="brand-name">Mahalakshmi</span>
                 <span className="brand-sub">Planners</span>
               </span>
-            </div>
-            <p>{copy.footerAbout}</p>
-            <p className="footer-reg">
-              {copy.footerReg}<br />
-              <strong>{business.engineer}, {business.qualification}</strong><br />
-              Reg. No. {business.regNo}, {business.authority}
-            </p>
+            </a>
+            <nav className="footer-nav" aria-label="Footer">
+              {links.map(([href, label]) => (
+                <a key={href} href={href}>{label}</a>
+              ))}
+            </nav>
           </div>
-        </div>
-        <div className="wrap footer-bottom">
-          <span>© {new Date().getFullYear()} {business.name}. {copy.rights}</span>
+
+          <div className="footer-main">
+            <p className="footer-about">{copy.footerAbout}</p>
+            <div className="footer-plate">
+              <span className="footer-plate-label">{copy.footerReg}</span>
+              <strong>{business.engineer}</strong>
+              <span>{business.qualification}</span>
+              <span className="footer-plate-reg">Reg. No. {business.regNo} · {business.authority}</span>
+            </div>
+          </div>
+
+          <div className="footer-bottom">
+            <span>© {new Date().getFullYear()} {business.name}. {copy.rights}</span>
+            <a href="#top" className="footer-top-link">{copy.backToTop} ↑</a>
+          </div>
         </div>
       </footer>
 
