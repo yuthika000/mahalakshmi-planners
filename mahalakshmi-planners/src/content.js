@@ -215,7 +215,7 @@ export const t = {
     tagline: 'உங்கள் நிலத்துக்கு ஏற்ற திட்டம், உங்கள் கனவுக்கு ஏற்ற இல்லம்!',
     heroTitle: 'Plan smart.\nBuild right.\nWe handle the approvals.',
     heroText:
-      'Building plans, DTCP approvals, elevations and estimates for homes and plots across Cuddalore district, from a registered engineer.',
+      'Building plans, DTCP approvals, elevations and estimates for homes and plots across Neyveli, from a registered engineer.',
     heroCall: 'Call 87601 19242',
     heroWhatsapp: 'WhatsApp us',
     factReg: 'DTCP Reg. No.',
@@ -282,7 +282,7 @@ export const t = {
     tagline: 'உங்கள் நிலத்துக்கு ஏற்ற திட்டம், உங்கள் கனவுக்கு ஏற்ற இல்லம்!',
     heroTitle: 'கவனத்துடன் திட்டமிட்ட இல்லம். அனுமதி முழுவதும் எங்கள் பொறுப்பு.',
     heroText:
-      'நெய்வேலியில் பதிவு பெற்ற பொறியாளரிடமிருந்து, கடலூர் மாவட்டம் முழுவதும் வீடுகள் மற்றும் மனைகளுக்கான கட்டட வரைபடம், DTCP அனுமதி, முகப்பு வடிவமைப்பு மற்றும் மதிப்பீடு.',
+      'பதிவு பெற்ற பொறியாளரிடமிருந்து, நெய்வேலி முழுவதும் வீடுகள் மற்றும் மனைகளுக்கான கட்டட வரைபடம், DTCP அனுமதி, முகப்பு வடிவமைப்பு மற்றும் மதிப்பீடு.',
     heroCall: 'அழைக்க 87601 19242',
     heroWhatsapp: 'வாட்ஸ்அப்',
     factReg: 'DTCP பதிவு எண்',
