@@ -7,7 +7,7 @@ import {
   PinIcon,
 } from './Icons.jsx';
 
-export default function Contact({ copy, lang }) {
+export default function Contact({ copy }) {
   const [form, setForm] = useState({
     name: '',
     phone: '',
@@ -677,7 +677,7 @@ export default function Contact({ copy, lang }) {
                         key={service.id}
                         value={service.id}
                       >
-                        {service[lang].title}
+                        {service.en.title}
                       </option>
                     ))}
                   </select>

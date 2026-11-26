@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import Header from './components/Header.jsx';
 import Hero from './components/Hero.jsx';
 import Marquee from './components/Marquee.jsx';
@@ -15,14 +15,6 @@ import Footer from './components/Footer.jsx';
 import FloatingWhatsApp from './components/FloatingWhatsApp.jsx';
 import { t } from './content.js';
 
-function initialLang() {
-  try {
-    return localStorage.getItem('lang') === 'ta' ? 'ta' : 'en';
-  } catch {
-    return 'en';
-  }
-}
-
 // Elements that fade up as they scroll into view
 const REVEAL = [
   '.section-head', '.intro-copy', '.intro-visual', '.category', '.elev', '.process .display',
@@ -30,7 +22,7 @@ const REVEAL = [
   '.about-grid > div:last-child', '.faq-grid > div:first-child', '.faq-item', '.contact-panel', '.form',
 ].join(',');
 
-function useReveal(dep) {
+function useReveal() {
   useEffect(() => {
     const reduce = window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
     if (reduce || !('IntersectionObserver' in window)) return;
@@ -48,37 +40,29 @@ function useReveal(dep) {
     );
     els.forEach((el) => io.observe(el));
     return () => io.disconnect();
-  }, [dep]);
+  }, []);
 }
 
 export default function App() {
-  const [lang, setLang] = useState(initialLang);
-  const copy = t[lang];
+  const copy = t.en;
 
-  useEffect(() => {
-    document.documentElement.lang = lang;
-    try { localStorage.setItem('lang', lang); } catch { /* storage unavailable */ }
-  }, [lang]);
-
-  useReveal(lang);
-
-  const toggle = () => setLang((l) => (l === 'en' ? 'ta' : 'en'));
+  useReveal();
 
   return (
     <>
-      <Header copy={copy} lang={lang} onToggleLang={toggle} />
+      <Header copy={copy} />
       <main>
-        <Hero copy={copy} lang={lang} />
-        <Marquee lang={lang} />
-        <Intro copy={copy} lang={lang} />
-        <Services copy={copy} lang={lang} />
-        <Elevations copy={copy} lang={lang} />
-        <Process copy={copy} lang={lang} />
+        <Hero copy={copy} />
+        <Marquee />
+        <Intro copy={copy} />
+        <Services copy={copy} />
+        <Elevations copy={copy} />
+        <Process copy={copy} />
         <Band copy={copy} />
-        <Documents copy={copy} lang={lang} />
+        <Documents copy={copy} />
         <About copy={copy} />
 
-        <Contact copy={copy} lang={lang} />
+        <Contact copy={copy} />
       </main>
       <Footer copy={copy} />
       <FloatingWhatsApp label={copy.fabLabel} />

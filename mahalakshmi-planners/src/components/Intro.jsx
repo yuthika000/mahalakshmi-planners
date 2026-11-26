@@ -1,7 +1,7 @@
 import PlanSheet from './PlanSheet.jsx';
 import { photos } from '../content.js';
 
-export default function Intro({ copy, lang }) {
+export default function Intro({ copy }) {
   const points = [copy.introPoint1, copy.introPoint2, copy.introPoint3];
   return (
     <section className="section intro">
@@ -17,7 +17,7 @@ export default function Intro({ copy, lang }) {
           <div className="intro-block" aria-hidden="true" />
           {photos.intro
             ? <img src={photos.intro} alt="" className="intro-photo" />
-            : <PlanSheet lang={lang} />}
+            : <PlanSheet />}
         </div>
       </div>
     </section>

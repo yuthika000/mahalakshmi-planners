@@ -6,7 +6,7 @@ import { ApprovalArt, DesignArt, EstimateArt } from './Illustrations.jsx';
 const art = { approvals: ApprovalArt, design: DesignArt, estimates: EstimateArt };
 const byId =Object.fromEntries(services.map((s) => [s.id, s]));
 
-export default function Services({ copy, lang }) {
+export default function Services({ copy }) {
   return (
     <section className="section services" id="services">
       <div className="wrap">
@@ -21,8 +21,8 @@ export default function Services({ copy, lang }) {
             <article key={c.key} className={`category category-${c.key}`}>
               <div className="category-art"><Art /></div>
               <header className="category-head">
-                <h3>{c[lang].title}</h3>
-                <p>{c[lang].text}</p>
+                <h3>{c.en.title}</h3>
+                <p>{c.en.text}</p>
               </header>
               <ul className="category-list">
                 {c.ids.map((id) => {
@@ -31,8 +31,8 @@ export default function Services({ copy, lang }) {
                     <li key={id}>
                       <span className="cl-icon"><ServiceIcon name={id} size={22} /></span>
                       <span>
-                        <strong>{s[lang].title}</strong>
-                        <small>{s[lang].text}</small>
+                        <strong>{s.en.title}</strong>
+                        <small>{s.en.text}</small>
                       </span>
                     </li>
                   );

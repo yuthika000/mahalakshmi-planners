@@ -2,7 +2,7 @@ import HouseScene from './HouseScene.jsx';
 import { PhoneIcon, WhatsAppIcon } from './Icons.jsx';
 import { business, photos, steps } from '../content.js';
 
-export default function Hero({ copy, lang }) {
+export default function Hero({ copy }) {
   return (
     <section className="hero" id="top">
       <div className="hero-media">

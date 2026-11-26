@@ -1,7 +1,7 @@
 import { documents } from '../content.js';
 import { DocumentsArt } from './Illustrations.jsx';
 
-export default function Documents({ copy, lang }) {
+export default function Documents({ copy }) {
   return (
     <section className="section documents" id="documents">
       <div className="wrap docs-grid">
@@ -12,7 +12,7 @@ export default function Documents({ copy, lang }) {
           <DocumentsArt />
         </div>
         <ul className="checklist">
-          {documents[lang].map((d) => (
+          {documents.en.map((d) => (
             <li key={d}>
               <svg viewBox="0 0 20 20" width="20" height="20" aria-hidden="true">
                 <circle cx="10" cy="10" r="9" />

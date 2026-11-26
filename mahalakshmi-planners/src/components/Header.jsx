@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import Logo from './Logo.jsx';
 import { business } from '../content.js';
 
-export default function Header({ copy, lang, onToggleLang }) {
+export default function Header({ copy }) {
   const [open, setOpen] = useState(false);
   const [solid, setSolid] = useState(false);
 

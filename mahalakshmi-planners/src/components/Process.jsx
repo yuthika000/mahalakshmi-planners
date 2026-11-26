@@ -1,7 +1,7 @@
 import { steps } from '../content.js';
 import { StepIcon } from './Illustrations.jsx';
 
-export default function Process({ copy, lang }) {
+export default function Process({ copy }) {
   return (
     <section className="section process" id="process">
       <div className="wrap">
@@ -13,8 +13,8 @@ export default function Process({ copy, lang }) {
                 <span className="step-num" aria-hidden="true">{String(i + 1).padStart(2, '0')}</span>
                 <span className="step-icon"><StepIcon index={i} /></span>
               </div>
-              <h3>{s[lang].title}</h3>
-              <p>{s[lang].text}</p>
+              <h3>{s.en.title}</h3>
+              <p>{s.en.text}</p>
             </li>
           ))}
         </ol>

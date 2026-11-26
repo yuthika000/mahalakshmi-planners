@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { faqs } from '../content.js';
 
-export default function Faq({ copy, lang }) {
+export default function Faq({ copy }) {
   const [open, setOpen] = useState(0);
   return (
     <section className="section faq" id="faq">
@@ -23,12 +23,12 @@ export default function Faq({ copy, lang }) {
                     id={`faq-q-${i}`}
                     onClick={() => setOpen(isOpen ? -1 : i)}
                   >
-                    <span>{f[lang].q}</span>
+                    <span>{f.en.q}</span>
                     <span className="faq-sign" aria-hidden="true" />
                   </button>
                 </h3>
                 <div className="faq-a" id={`faq-a-${i}`} role="region" aria-labelledby={`faq-q-${i}`}>
-                  <div><p>{f[lang].a}</p></div>
+                  <div><p>{f.en.a}</p></div>
                 </div>
               </div>
             );

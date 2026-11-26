@@ -5,10 +5,8 @@ import { business } from '../content.js';
   with dimensions, a north arrow and an engineer's title block.
   Wall lines "draw in" once on page load (disabled for reduced motion).
 */
-export default function PlanSheet({ lang }) {
-  const L = lang === 'ta'
-    ? { bed: 'படுக்கை', hall: 'கூடம்', kitchen: 'சமையல்', pooja: 'பூஜை', toilet: 'கழிவறை', portico: 'போர்டிகோ', proposed: 'உத்தேச குடியிருப்பு', scale: 'அளவு 1:100' }
-    : { bed: 'Bedroom', hall: 'Hall', kitchen: 'Kitchen', pooja: 'Pooja', toilet: 'Toilet', portico: 'Portico', proposed: 'Proposed residence', scale: 'Scale 1:100' };
+export default function PlanSheet() {
+  const L = { bed: 'Bedroom', hall: 'Hall', kitchen: 'Kitchen', pooja: 'Pooja', toilet: 'Toilet', portico: 'Portico', proposed: 'Proposed residence', scale: 'Scale 1:100' }
 
   return (
     <figure className="sheet" aria-label="Sample floor plan drawing with engineer's title block">

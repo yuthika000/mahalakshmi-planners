@@ -1,8 +1,8 @@
 import { services } from '../content.js';
 
 // Slow-moving strip of service names under the hero.
-export default function Marquee({ lang }) {
-  const items = services.map((s) => s[lang].title);
+export default function Marquee() {
+  const items = services.map((s) => s.en.title);
   const row = (hidden) => (
     <ul className="marquee-row" aria-hidden={hidden || undefined}>
       {items.map((t) => (
