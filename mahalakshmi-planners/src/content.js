@@ -16,6 +16,8 @@ export const business = {
     'Kurinjipadi Taluk, Cuddalore District',
   ],
   mapQuery: 'Thillai Nagar, Vadakuthu, Neyveli, Tamil Nadu',
+  // Link to the Google Maps reviews page, e.g. 'https://g.page/r/.../review'. Leave null to hide the button.
+  googleReviewsUrl: null,
 };
 
 // Photos: put your own images in /public/images and set the paths here,
@@ -205,6 +207,18 @@ export const faqs = [
   },
 ];
 
+// Customer reviews shown in the Reviews section.
+// Add only real reviews from real clients, with their permission. Example:
+// {
+//   name: 'Client name',
+//   place: 'Neyveli',
+//   rating: 5,                       // 1 to 5
+//   service: 'Building plan approval',
+//   en: 'Review text in English.',
+//   ta: 'Review text in Tamil (optional, English is shown if left out).',
+// },
+export const reviews = [];
+
 export const t = {
   en: {
     langLabel: 'தமிழ்',
@@ -252,6 +266,15 @@ export const t = {
     regLabel: 'Registration',
     qualLabel: 'Qualification',
     officeLabel: 'Office',
+    reviewsTitle: 'What our clients say',
+    reviewsText: 'Families and plot owners across Cuddalore district on working with us.',
+    reviewsEmpty: 'Reviews from our clients will appear here soon.',
+    reviewsShareTitle: 'Worked with us?',
+    reviewsShareText: 'Tell us how your plan or approval went. With your permission, we may add it here.',
+    reviewsShareCta: 'Share your review',
+    reviewsShareMessage: 'Hello Mahalakshmi Planners, here is my review:',
+    reviewsGoogle: 'Review us on Google',
+    reviewsStars: (n) => `Rated ${n} out of 5`,
     contactTitle: 'The first step to your dream home',
     contactText: 'Call, send a WhatsApp message or visit the office in Vadakuthu.',
     formTitle: 'Send an enquiry',
@@ -320,6 +343,15 @@ export const t = {
     regLabel: 'பதிவு எண்',
     qualLabel: 'கல்வித் தகுதி',
     officeLabel: 'அலுவலகம்',
+    reviewsTitle: 'எங்கள் வாடிக்கையாளர்கள் சொல்வது',
+    reviewsText: 'கடலூர் மாவட்டம் முழுவதும் உள்ள குடும்பங்களும் மனை உரிமையாளர்களும் எங்களுடன் பணியாற்றிய அனுபவம்.',
+    reviewsEmpty: 'எங்கள் வாடிக்கையாளர்களின் கருத்துகள் விரைவில் இங்கே இடம்பெறும்.',
+    reviewsShareTitle: 'எங்களுடன் பணியாற்றினீர்களா?',
+    reviewsShareText: 'உங்கள் வரைபடம் அல்லது அனுமதி அனுபவத்தைச் சொல்லுங்கள். உங்கள் அனுமதியுடன் இங்கே சேர்க்கலாம்.',
+    reviewsShareCta: 'உங்கள் கருத்தைப் பகிர',
+    reviewsShareMessage: 'வணக்கம் மகாலட்சுமி பிளானர்ஸ், என் கருத்து:',
+    reviewsGoogle: 'Google-ல் மதிப்பிட',
+    reviewsStars: (n) => `5-க்கு ${n} மதிப்பீடு`,
     contactTitle: 'உங்கள் கனவு இல்லத்திற்கான முதல் படி',
     contactText: 'அழையுங்கள், வாட்ஸ்அப்பில் செய்தி அனுப்புங்கள், அல்லது வடக்குத்து அலுவலகத்திற்கு நேரில் வாருங்கள்.',
     formTitle: 'விசாரணை அனுப்ப',
