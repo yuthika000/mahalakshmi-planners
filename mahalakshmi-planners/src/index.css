@@ -1197,7 +1197,7 @@ html[lang='ta'] .category-head h3 {
 .footer {
   background: var(--forest-ink);
   color: rgba(255, 255, 255, .66);
-  padding: 72px 0 0;
+  padding: 44px 0 0;
   font-size: .95rem;
   border-top: 2px solid var(--brass);
 }
@@ -1213,16 +1213,6 @@ html[lang='ta'] .category-head h3 {
   color: var(--brass-light);
 }
 
-.footer-top {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 32px;
-  flex-wrap: wrap;
-  padding-bottom: 40px;
-  border-bottom: 1px solid rgba(255, 255, 255, .1);
-}
-
 .footer .brand {
   color: #efe6d3;
 }
@@ -1231,42 +1221,22 @@ html[lang='ta'] .category-head h3 {
   font-size: 1.6rem;
 }
 
-.footer-nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px 36px;
-  font-size: .82rem;
-  font-weight: 600;
-  letter-spacing: .14em;
-  text-transform: uppercase;
-}
-
-html[lang='ta'] .footer-nav {
-  letter-spacing: 0;
-  text-transform: none;
-  font-size: .95rem;
-}
-
 .footer-main {
   display: grid;
   grid-template-columns: 1.3fr 1fr;
-  gap: 64px;
+  gap: 48px;
   align-items: center;
-  padding: 48px 0;
+  padding-bottom: 32px;
+}
+
+.footer-brand .brand {
+  margin-bottom: 14px;
 }
 
 .footer-about {
   margin: 0;
-  max-width: 34ch;
-  font-family: var(--serif);
-  font-size: 1.55rem;
-  line-height: 1.45;
-  color: #efe6d3;
-}
-
-html[lang='ta'] .footer-about {
-  font-family: var(--sans);
-  font-size: 1.2rem;
+  max-width: 46ch;
+  line-height: 1.6;
 }
 
 .footer-plate {
@@ -1275,7 +1245,7 @@ html[lang='ta'] .footer-about {
   flex-direction: column;
   gap: 4px;
   min-width: 300px;
-  padding: 26px 30px;
+  padding: 18px 24px;
   border: 1px solid rgba(201, 164, 106, .35);
   border-left: 3px solid var(--brass);
   border-radius: var(--radius);
@@ -1299,7 +1269,7 @@ html[lang='ta'] .footer-plate-label {
 .footer-plate strong {
   font-family: var(--serif);
   font-weight: 400;
-  font-size: 1.3rem;
+  font-size: 1.15rem;
   color: #fff;
 }
 
@@ -1315,7 +1285,7 @@ html[lang='ta'] .footer-plate-label {
   gap: 16px;
   flex-wrap: wrap;
   border-top: 1px solid rgba(255, 255, 255, .08);
-  padding: 22px 0 30px;
+  padding: 16px 0 20px;
   font-size: .85rem;
   color: rgba(255, 255, 255, .45);
 }
@@ -1329,21 +1299,13 @@ html[lang='ta'] .footer-plate-label {
 
 @media (max-width: 760px) {
   .footer {
-    padding-top: 56px;
-  }
-
-  .footer-nav {
-    gap: 10px 24px;
+    padding-top: 36px;
   }
 
   .footer-main {
     grid-template-columns: 1fr;
-    gap: 32px;
-    padding: 36px 0;
-  }
-
-  .footer-about {
-    font-size: 1.3rem;
+    gap: 24px;
+    padding-bottom: 24px;
   }
 
   .footer-plate {

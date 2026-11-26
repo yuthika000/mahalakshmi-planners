@@ -3,34 +3,21 @@ import { PhoneIcon, WhatsAppIcon } from './Icons.jsx';
 import Logo from './Logo.jsx';
 
 export default function Footer({ copy }) {
-  const links = [
-    ['#services', copy.nav.services],
-    ['#process', copy.nav.process],
-    ['#about', copy.nav.about],
-    ['#contact', copy.nav.contact],
-  ];
-
   return (
     <>
       <footer className="footer">
         <div className="wrap">
-          <div className="footer-top">
-            <a href="#top" className="brand" aria-label={business.name}>
-              <Logo size={48} />
-              <span className="brand-text">
-                <span className="brand-name">Mahalakshmi</span>
-                <span className="brand-sub">Planners</span>
-              </span>
-            </a>
-            <nav className="footer-nav" aria-label="Footer">
-              {links.map(([href, label]) => (
-                <a key={href} href={href}>{label}</a>
-              ))}
-            </nav>
-          </div>
-
           <div className="footer-main">
-            <p className="footer-about">{copy.footerAbout}</p>
+            <div className="footer-brand">
+              <a href="#top" className="brand" aria-label={business.name}>
+                <Logo size={44} />
+                <span className="brand-text">
+                  <span className="brand-name">Mahalakshmi</span>
+                  <span className="brand-sub">Planners</span>
+                </span>
+              </a>
+              <p className="footer-about">{copy.footerAbout}</p>
+            </div>
             <div className="footer-plate">
               <span className="footer-plate-label">{copy.footerReg}</span>
               <strong>{business.engineer}</strong>
